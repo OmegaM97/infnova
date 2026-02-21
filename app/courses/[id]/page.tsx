@@ -1,9 +1,35 @@
 import { Clock, Users, Medal, Star, ArrowLeft } from "lucide-react";
 import Image from "next/image";
-import { courseDetailExample, CourseDetail } from "../../courseList";
+import { notFound } from "next/navigation";
 
-const CourseDetailPage = () => {
-  const course: CourseDetail = courseDetailExample;
+interface CourseDetail {
+  id: string;
+  title: string;
+  description: string;
+  instructor: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  duration: string;
+  thumbnail: string;
+  skills: string[];
+  enrolled: number;
+  rating: number;
+  category: string;
+}
+
+interface Props {
+    params: {id: String}
+}
+
+const CourseDetailPage = async ({params}: Props) => {
+    const { id } = await params
+    const idNumber = Number(params.id);
+
+  if (!idNumber || idNumber < 1 || idNumber > 8) {
+    notFound();
+  }
+  const response = await fetch(`https://infnova-course-api.vercel.app/api/courses/${id}`)
+  const course: CourseDetail = await response.json()
+  console.log(course)
 
   const levelStyles =
     course.level === "Beginner"
