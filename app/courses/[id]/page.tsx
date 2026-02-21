@@ -30,7 +30,6 @@ const CourseDetailPage = async ({params}: Props) => {
   }
   const response = await fetch(`https://infnova-course-api.vercel.app/api/courses/${id}`, { cache: "no-store" })
   const course: CourseDetail = await response.json()
-  console.log(course)
 
   const levelStyles =
     course.level === "Beginner"
