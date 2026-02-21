@@ -13,10 +13,10 @@ export default function CourseNotFound() {
       </p>
 
       <Link
-        href="/courses"
+        href="/"
         className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition"
       >
-        Back to Courses
+        Back to Home
       </Link>
     </div>
   );

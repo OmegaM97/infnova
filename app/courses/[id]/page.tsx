@@ -1,4 +1,4 @@
-import { Clock, Users, Medal, Star, ArrowLeft } from "lucide-react";
+import { Clock, Users, Medal, Star, ArrowLeft, BookOpen } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -107,13 +107,7 @@ const CourseDetailPage = async ({params}: Props) => {
         <div className="md:w-7/10 flex flex-col gap-6">
           <div className="bg-white rounded-xl p-6 shadow-md">
             <div className="flex items-center gap-2 mb-4">
-              <svg
-                className="w-6 h-6 text-[#F54900]"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L3 7v13h18V7l-9-5z" />
-              </svg>
+              <BookOpen size={20} className="text-[#f54900]" />
               <h2 className="text-black font-semibold text-xl md:text-2xl">
                 What You Will Learn
               </h2>

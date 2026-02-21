@@ -9,7 +9,7 @@ const Footer = () => {
           
           <div className="md:w-1/2">
             <h2 className="text-white text-2xl font-bold mb-4">
-              INFINOVA Technologies
+              INFNOVA Technologies
             </h2>
             <p className="text-gray-300 leading-relaxed">
               We provide high-quality online courses designed to help you build
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
-          © 2026 INFINOVA Technologies. All rights reserved.
+          © 2026 INFNOVA Technologies. All rights reserved.
         </div>
       </div>
     </footer>

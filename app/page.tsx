@@ -31,8 +31,7 @@ const HomePage = async () => {
           </h1>
 
           <p className="text-gray-200 text-lg md:text-xl max-w-2xl">
-            Discover high-quality courses designed to help you grow your skills
-            and advance your career.
+            Master new skills with expert-led courses designed for the modern learner. Start your learning journey today with INFNOVA Academy.
           </p>
         </div>
       </section>

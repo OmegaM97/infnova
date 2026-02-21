@@ -12,13 +12,13 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white px-6 md:px-8 py-4 flex items-center justify-between shadow-sm relative">
       <div className="flex items-center">
-        <Image
+        <Link href="/"><Image
           src={Logo}
           alt="Logo"
-          width={40}
-          height={40}
+          width={150}
+          height={50}
           className="object-contain"
-        />
+        /></Link>
       </div>
 
       <div className="hidden md:flex items-center gap-8 text-gray-500 font-medium">
