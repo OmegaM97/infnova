@@ -10,7 +10,7 @@ export default function LoadingCourse() {
           <div className="h-20 bg-gray-200 rounded w-full" />
         </div>
 
-        <div className="h-[250px] bg-gray-200 rounded-xl" />
+        <div className="h-62.5 bg-gray-200 rounded-xl" />
       </div>
     </div>
   );

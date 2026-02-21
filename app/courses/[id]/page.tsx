@@ -1,6 +1,7 @@
 import { Clock, Users, Medal, Star, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 interface CourseDetail {
   id: string;
@@ -22,12 +23,12 @@ interface Props {
 
 const CourseDetailPage = async ({params}: Props) => {
     const { id } = await params
-    const idNumber = Number(params.id);
+    const idNumber = Number(id);
 
   if (!idNumber || idNumber < 1 || idNumber > 8) {
     notFound();
   }
-  const response = await fetch(`https://infnova-course-api.vercel.app/api/courses/${id}`)
+  const response = await fetch(`https://infnova-course-api.vercel.app/api/courses/${id}`, { cache: "no-store" })
   const course: CourseDetail = await response.json()
   console.log(course)
 
@@ -42,7 +43,7 @@ const CourseDetailPage = async ({params}: Props) => {
     <main className="max-w-full mx-auto py-3 bg-gray-50">
       <div className="mb-3 px-8 flex items-center gap-2 text-gray-600 hover:text-gray-900 cursor-pointer font-medium">
         <ArrowLeft size={18} />
-        <span>Back to Courses</span>
+        <Link href="/">Back to Courses</Link>
       </div>
 
       <section className="w-full bg-linear-to-r from-[#F54900] to-[#FF6900] shadow-sm flex flex-col md:flex-row overflow-hidden h-auto md:h-87.5">
